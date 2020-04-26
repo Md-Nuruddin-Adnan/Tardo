@@ -1,0 +1,115 @@
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1199px) { 
+  .navbar-dark .navbar-nav .nav-link.active::before {
+    display: none;
+  }
+
+  .footer .link ul {
+    text-align: center;
+  }
+ }
+
+/* Large devices (desktops and laptop) */
+@media (max-width: 991px) {
+  #play_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
+    grid-gap: 10px;
+  }
+
+  .video .play-list a:hover::before, .video .play-list a.active::before {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(135deg);
+  }
+ }
+
+/* Large devices (large desktops and Laptop) */
+@media (min-width: 991px) {
+  .col-lg-2 {
+    flex: 0 0 20.666667%;
+    max-width: 20.666667%;
+  }
+
+  .col-lg-10 {
+    -ms-flex: 0 0 79.333333%;
+    flex: 0 0 79.333333%;
+    max-width: 79.333333%;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .col-xl-2 {
+    flex: 0 0 20.666667%;
+    max-width: 20.666667%;
+  }
+
+  .col-xl-10 {
+    -ms-flex: 0 0 79.333333%;
+    flex: 0 0 79.333333%;
+    max-width: 79.333333%;
+  }
+}
+
+/* Extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .sidebar .register-box h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1600px) {
+  .sidebar .recommended-item{
+    margin-bottom: 20px;
+  }
+
+  /* .live-item {
+    padding: 13px 0;
+  } */
+
+  .live-item .title {
+    font-size: 16px;
+  }
+
+  .live-item .number {
+    font-size: 11pz;
+  }
+
+  .live-item .right .text {
+    font-size: 13px;
+  }
+  
+  .adult-item .tilte,
+  .category_item .name,
+  .live-item .title {
+    font-size: 16px;
+  }
+
+  .category_item span {
+    font-size: 12px;
+  }
+
+  .adult-item .name {
+    font-size: 14px;
+  }
+
+  .adult-item span {
+    font-size: 11px;
+  }
+
+  .sidebar .register-box {
+    margin: 100px 0;
+  }
+
+  .category-full {
+    grid-gap: 20px;
+  }
+
+  .adult-item-full {
+    grid-gap: 20px;
+  }
+}

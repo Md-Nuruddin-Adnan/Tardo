@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tardo</title>
+  <link rel='shortcut icon' href='images/Logo_short.png' type='image/x-icon'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- === header section start === -->
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-dark">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Logo.png" alt="logo" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" id="main-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BROWSE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">RECOMMENDED</a>
+          </li>
+          <form class="form-inline my-2 my-xl-0 ml-xl-4 ml-0">
+            <div class="input-group">
+              <input type="search" class="form-control" placeholder="Search...">
+              <div class="input-group-append">
+                <button class="input-group-text" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </ul>
+
+        <!-- Login/Registration -->
+        <div>
+          <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#login_modal">Login</a>
+          <a href="#" class="btn btn-danger ml-2" data-toggle="modal" data-target="#registration_modal">Registration</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ===//end of header section === -->
+
+  <!-- === Login Modal Start === -->
+  <div class="modal fade" id="login_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+  
+        <div class="modal-content">
+        <div class="d-flex align-content-center justify-content-center pt-3">
+          <div class="logo pr-2"><img src="images/Logo_short.png" alt="logo" class="img-flulid"></div>
+          <h3>Log in to TARDO</h3>
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="close_btn">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="GET">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Nickname</label>
+              <input type="text" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+          
+          <a href="#" class="text-danger">Forgot Password?</a>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-block">Login</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  <!-- === end of Login Modal === -->
+ 
+
+  <!-- === Registration Modal Start === -->
+  <div class="modal fade" id="registration_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+  
+        <div class="modal-content">
+        <div class="d-flex align-content-center justify-content-center pt-3">
+          <div class="logo pr-2"><img src="images/Logo_short.png" alt="logo" class="img-flulid"></div>
+          <h3>Registration to TARDO</h3>
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="close_btn">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="GET">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Enter Name</label>
+              <input type="text" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-form-label">Enter Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-form-label">Enter Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-block">Registration</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  <!-- === end of Login Modal === -->
+ 
+
+  <!-- === main content start === -->
+  <div class="container-fluid" id="main-conent">
+    <div class="row">
+      <div class="col-xl-2 order-xl-1 order-2">
+       <aside class="sidebar">
+
+        <!-- recommended start -->
+         <div class="recommended">
+           <h4 class="title mt-2 mb-4">RECOMMENDED STREAMS</h4>
+           <div class="recommended-item">
+             <a href="#">
+             <div class="d-flex justify-content-between align-content-center">
+               <div class="left d-flex align-content-center">
+                 <div class="img">
+                   <img src="images/face_1.png" alt="face" class="img-fluid">
+                 </div>
+                 <div class="text">
+                   <h5>Fimmsen</h5>
+                   <p>Mario Maker 2</p>
+                 </div>
+               </div>
+               <div class="right d-flex align-content-center">
+                 <span></span>1150
+               </div>
+             </div>
+            </a>
+           </div>
+           <div class="recommended-item">
+            <a href="#">
+             <div class="d-flex justify-content-between align-content-center">
+               <div class="left d-flex align-content-center">
+                 <div class="img">
+                   <img src="images/face_2.png" alt="face" class="img-fluid">
+                 </div>
+                 <div class="text">
+                   <h5>Nikerkun</h5>
+                   <p>Just Dance</p>
+                 </div>
+               </div>
+               <div class="right d-flex align-content-center">
+                 <span></span>
+                 1150
+               </div>
+             </div>
+             </a>
+           </div>
+           <div class="recommended-item">
+            <a href="#">
+             <div class="d-flex justify-content-between align-content-center">
+               <div class="left d-flex align-content-center">
+                 <div class="img">
+                   <img src="images/face_1.png" alt="face" class="img-fluid">
+                 </div>
+                 <div class="text">
+                   <h5>Fimmsen</h5>
+                   <p>Mario Maker 2</p>
+                 </div>
+               </div>
+               <div class="right d-flex align-content-center">
+                 <span></span>
+                 1150
+               </div>
+             </div>
+             </a>
+           </div>
+           <div class="recommended-item">
+            <a href="#">
+             <div class="d-flex justify-content-between align-content-center">
+               <div class="left d-flex align-content-center">
+                 <div class="img">
+                   <img src="images/face_2.png" alt="face" class="img-fluid">
+                 </div>
+                 <div class="text">
+                   <h5>Nikerkun</h5>
+                   <p>Just Dance</p>
+                 </div>
+               </div>
+               <div class="right d-flex align-content-center">
+                 <span></span>
+                 1150
+               </div>
+             </div>
+             </a>
+           </div>
+           <div class="recommended-item">
+            <a href="#">
+             <div class="d-flex justify-content-between align-content-center">
+               <div class="left d-flex align-content-center">
+                 <div class="img">
+                   <img src="images/face_1.png" alt="face" class="img-fluid">
+                 </div>
+                 <div class="text">
+                   <h5>Fimmsen</h5>
+                   <p>Mario Maker 2</p>
+                 </div>
+               </div>
+               <div class="right d-flex align-content-center">
+                 <span></span>
+                 1150
+               </div>
+             </div>
+             </a>
+           </div>
+           <button class="btn btn-sm text-danger"><small>Show more...</small></button>
+         </div>
+        <!-- recommended end -->
+
+         <div class="register-box shadow">
+           <h4>Join the TARDO community!</h4>
+           <h5>Discover the best live streams.</h5>
+           <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#registration_modal">Register</a>
+         </div>
+
+         <footer class="footer">
+           <div class="link">
+             <ul>
+               <li><a href="#">Imprint</a></li>
+               <li><a href="#">About us</a></li>
+               <li><a href="#">Jobs </a></li>
+               <li><a href="#">TARDO Fire</a></li>
+               <li><a href="#">Advertising</a></li>
+               <li><a href="#">Cookies </a></li>
+               <li><a href="#">Help</a></li>
+               <li><a href="#">Terms of Use</a></li>
+               <li><a href="#">Privacy policy</a></li>
+             </ul>
+           </div>
+           <div class="social-link py-4">
+             <ul class="text-center">
+               <li><a href="#"><img src="images/social_icon/discord.png" alt="discord" class="img-fluid"></a></li>
+               <li><a href="#"><img src="images/social_icon/youtube.png" alt="youtube" class="img-fluid"></a></li>
+               <li><a href="#"><img src="images/social_icon/instagram-sketched.png" alt="instagram-sketched" class="img-fluid"></a></li>
+             </ul>
+           </div>
+         </footer>
+
+       </aside>
+      </div>
+      <div class="col-xl-10 order-xl-2 order-1">
+        <div class="row mt-4">
+          <div class="col-lg-7">
+            <section class="video">
+              <div class="row">
+                <div class="col-lg-10">
+                  <div class="watch-video">
+                    <div class="main-video">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="channel-information d-flex align-content-center mt-2 mb-lg-0 mb-3">
+                      <a href="#" class="channel-img"><img src="images/channel_logo.png" alt="channel_logo" class="img-fluid"></a>
+                      <h5 class="video-title">KingSkyzzy is playing Call of Duty: Modern Warfare (Warzone)</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div id="play_list" class="play-list">
+                    <a href="#" class="d-block mb-2 active video-link">
+                      <img src="images/thumbnail_sm_1.png" alt="thumbnail image" class="w-100 thumbnail-image">
+                    </a>
+                    <a href="#" class="d-block mb-2 video-link">
+                      <img src="images/thumbnail_sm_2.png" alt="thumbnail image" class="w-100 thumbnail-image">
+                    </a>
+                    <a href="#" class="d-block mb-2 video-link">
+                      <img src="images/thumbnail_sm_2.png" alt="thumbnail image" class="w-100 thumbnail-image">
+                    </a>
+                    <a href="#" class="d-block mb-2 video-link">
+                      <img src="images/thumbnail_sm_2.png" alt="thumbnail image" class="w-100 thumbnail-image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-5">
+            <div class="now-live">
+              <div class="now-live-header d-flex align-content-center justify-content-between">
+                <h6>Creators on the Rise</h6>
+                <img src="images/now_live/live_logo.png" alt="live-logo" class="img-fluid live-logo">
+                <h6>Now Live</h6>
+              </div>
+              <div class="all-live-items mt-2 pb-4">
+              <a href="#" class="live-item">
+                <div class=" d-flex align-items-center justify-content-between">
+                  <div class="left d-flex  align-items-center justify-content-between">
+                    <div class="channel-logo">
+                      <img src="images/now_live/channel_logo_1.png" alt="channel_logo" class="img-fluid">
+                    </div>
+                    <h5 class="title">KingSkyzzy is playing Call of Duty: Mo...</h5>
+                  </div>
+                  <div class="right d-flex">
+                    <ul class="text-center">
+                      <li class="number">200</li>
+                      <li class="icon"><i class="fas fa-arrow-up    "></i></li>
+                    </ul>
+                    <div class="text">Follower</div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="live-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="left d-flex  align-items-center justify-content-between">
+                    <div class="channel-logo">
+                      <img src="images/now_live/channel_logo_2.png" alt="channel_logo" class="img-fluid">
+                    </div>
+                    <h5 class="title">Fimmsen is playing Super Mario Make...</h5>
+                  </div>
+                  <div class="right d-flex">
+                    <ul class="text-center">
+                      <li class="number">25</li>
+                      <li class="icon"><i class="fas fa-arrow-up"></i></li>
+                    </ul>
+                    <div class="text">Viewer</div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="live-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="left d-flex  align-items-center justify-content-between">
+                    <div class="channel-logo">
+                      <img src="images/now_live/channel_logo_3.png" alt="channel_logo" class="img-fluid">
+                    </div>
+                    <h5 class="title">Nikerkun is playing Just Dance 2019</h5>
+                  </div>
+                  <div class="right d-flex">
+                    <ul class="text-center">
+                      <li class="number">15</li>
+                      <li class="icon"><i class="fas fa-arrow-up    "></i></li>
+                    </ul>
+                    <div class="text">Chatter</div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="live-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="left d-flex  align-items-center justify-content-between">
+                    <div class="channel-logo">
+                      <img src="images/now_live/channel_logo_4.png" alt="channel_logo" class="img-fluid">
+                    </div>
+                    <h5 class="title">DieterGrillt is playing Euro Truck Simul...</h5>
+                  </div>
+                  <div class="right d-flex">
+                    <ul class="text-center">
+                      <li class="number">196</li>
+                      <li class="icon"><i class="fas fa-arrow-up    "></i></li>
+                    </ul>
+                    <div class="text">Follower</div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="live-item">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="left d-flex  align-items-center justify-content-between">
+                    <div class="channel-logo">
+                      <img src="images/now_live/channel_logo_5.png" alt="channel_logo" class="img-fluid">
+                    </div>
+                    <h5 class="title">KIDDO is playing Minecraft</h5>
+                  </div>
+                  <div class="right d-flex">
+                    <ul class="text-center">
+                      <li class="number">15</li>
+                      <li class="icon"><i class="fas fa-arrow-up    "></i></li>
+                    </ul>
+                    <div class="text">Chatter</div>
+                  </div>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- === Category section start === -->
+        <section class="category">
+          <h2 class="heading">Popular categories</h2>
+          <div class="category-full">
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_1.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Real life</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>10.504 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_2.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Call of Duty: Mode...</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>9850 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_1.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Escape From Tark...</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>6565 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_4.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Minecraft</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>6589 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_5.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Fortnite</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>7562 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_6.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Rust</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>6455 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_7.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Real life</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>7685 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_8.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Rust</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>6548 watching</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="category_item">
+              <div>
+                <div class="img"><img src="images/categories/category_9.png" alt="category" class="img-fluid"></div>
+                <h6 class="name">Real life</h6>
+                <div class="d-flex-align-items-center">
+                  <i class="fas fa-user"></i>
+                  <span>6548 watching</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="text-center">
+            <button href="#" class="btn btn btn-dark more-btn">Show more <i class="fas fa-chevron-down"></i></button>
+          </div>
+          <div class="line"></div>
+        </section>
+        <!-- ===// End of Category section === -->
+
+        <!-- === adult-content start === -->
+        <section class="adult-content pt-4">
+          <!-- <div class="d-md-flex align-items-center justify-content-between"> -->
+            <!-- <h2 class="heading text-md-left text-center">Recommended small streamers </h2> -->
+            <div class="d-flex align-content-center justify-content-md-end justify-content-center pb-2">
+              <form>
+                <div class="custom-control custom-switch">
+                  <label for="switch1" class="text-label toggle_btn">Show 18+ Content</label>
+                  <input type="checkbox" class="custom-control-input" id="switch1" checked>
+                  <label class="custom-control-label toggle_btn" for="switch1"></label>
+                </div>
+              </form>
+
+              <div class="dropdown">
+                <button class="btn btn-sm lang-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Language
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">English (US)</a>
+                  <a class="dropdown-item" href="#">Language_2</a>
+                  <a class="dropdown-item" href="#">Language_3</a>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+
+          <div class="toggle-area">
+            <h2 class="heading text-md-left text-center">Recommended small streamers </h2>
+            <div class="adult-item-full">
+              <a href="#" class="adult-item">
+                <div class="img"><img src="images/18+content/thumbnail_1.png" alt="thumbnail" class="thumbnail-img w-100"></div>
+                <div class="d-flex align-content-center">
+                  <div class="channel-logo"><img src="images/18+content/channel_logo_1.png" alt="channel_logo" class="img-fluid"></div>
+                  <div class="text">
+                    <div class="tilte">I play your levels!</div>
+                    <div class="name">Fimmsen</div>
+                    <span>Super Mario Maker 2</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="adult-item">
+                <div class="img"><img src="images/18+content/thumbnail_2.png" alt="thumbnail" class="thumbnail-img w-100"></div>
+                <div class="d-flex align-content-center">
+                  <div class="channel-logo"><img src="images/18+content/channel_logo_2.png" alt="channel_logo" class="img-fluid"></div>
+                  <div class="text">
+                    <div class="tilte">Dancing at the highest level!</div>
+                    <div class="name">Nikerkun</div>
+                    <span>Lets Dance</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="adult-item">
+                <div class="img"><img src="images/18+content/thumbnail_1.png" alt="thumbnail" class="thumbnail-img w-100"></div>
+                <div class="d-flex align-content-center">
+                  <div class="channel-logo"><img src="images/18+content/channel_logo_1.png" alt="channel_logo" class="img-fluid"></div>
+                  <div class="text">
+                    <div class="tilte">I play your levels!</div>
+                    <div class="name">Fimmsen</div>
+                    <span>Super Mario Maker 2</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="adult-item">
+                <div class="img"><img src="images/18+content/thumbnail_2.png" alt="thumbnail" class="thumbnail-img w-100"></div>
+                <div class="d-flex align-content-center">
+                  <div class="channel-logo"><img src="images/18+content/channel_logo_2.png" alt="channel_logo" class="img-fluid"></div>
+                  <div class="text">
+                    <div class="tilte">Dancing at the highest level!</div>
+                    <div class="name">Nikerkun</div>
+                    <span>Lets Dance</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="adult-item">
+                <div class="img"><img src="images/18+content/thumbnail_1.png" alt="thumbnail" class="thumbnail-img w-100"></div>
+                <div class="d-flex align-content-center">
+                  <div class="channel-logo"><img src="images/18+content/channel_logo_1.png" alt="channel_logo" class="img-fluid"></div>
+                  <div class="text">
+                    <div class="tilte">I play your levels!</div>
+                    <div class="name">Fimmsen</div>
+                    <span>Super Mario Maker 2</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="text-center">
+              <button href="#" class="btn btn btn-dark more-btn">Show more <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="line"></div>
+          </div>
+        </section>
+        <!-- ===//end of adult-content === -->
+
+      </div>
+    </div>
+  </div>
+  <!-- ===//end of main content === -->
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>
