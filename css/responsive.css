@@ -1,4 +1,9 @@
-/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767px) { 
+  .adult-content .heading {
+    margin-top: 0;
+  }
+ }
+ 
 @media (max-width: 1199px) { 
   .navbar-dark .navbar-nav .nav-link.active::before {
     display: none;
