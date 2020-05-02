@@ -109,6 +109,16 @@ body {
   text-shadow: none;
   opacity: 1;
 }
+.modal .register-label i {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 0px;
+  display: block;
+  padding-left: 5px;
+}
+.modal .form-control::placeholder {
+  color: #fff;
+}
 
 
 
@@ -165,7 +175,7 @@ body {
 
 /* === main content start === */
 #main-conent {
-  margin-top: 70px;
+  margin-top: 68px;
 }
 /* ===// end of main content === */
 

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tardo</title>
+  <link rel='shortcut icon' href='images/Logo_short.png' type='image/x-icon'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/channel.css">
+  <link rel="stylesheet" href="css/channel_responsive.css">
+</head>
+<body>
+
+  <!-- === header section start === -->
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-dark">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Logo.png" alt="logo" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" id="main-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="channel.html">BROWSE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">RECOMMENDED</a>
+          </li>
+          <form class="form-inline my-2 my-xl-0 ml-xl-4 ml-0">
+            <div class="input-group">
+              <input type="search" class="form-control" placeholder="Search...">
+              <div class="input-group-append">
+                <button class="input-group-text" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </ul>
+
+        <!-- Login/Registration -->
+        <div>
+          <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#login_modal">Login</a>
+          <a href="#" class="btn btn-danger ml-2" data-toggle="modal" data-target="#registration_modal">Registration</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ===//end of header section === -->
+
+  <!-- === Login Modal Start === -->
+  <div class="modal fade" id="login_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+  
+        <div class="modal-content">
+        <div class="d-flex align-content-center justify-content-center pt-3">
+          <div class="logo pr-2"><img src="images/Logo_short.png" alt="logo" class="img-flulid"></div>
+          <h3>Log in to TARDO</h3>
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="close_btn">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="GET">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Nickname</label>
+              <input type="text" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+          
+          <a href="#" class="text-danger">Forgot Password?</a>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-block">Login</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  <!-- === end of Login Modal === -->
+ 
+
+  <!-- === Registration Modal Start === -->
+  <div class="modal fade" id="registration_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+  
+        <div class="modal-content">
+        <div class="d-flex align-content-center justify-content-center pt-3">
+          <div class="logo pr-2"><img src="images/Logo_short.png" alt="logo" class="img-flulid"></div>
+          <h3>Registration to TARDO</h3>
+        </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="close_btn">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="GET">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Nickname</label>
+              <input type="text" class="form-control" id="recipient-name" required>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="form-group">
+              <label for="password_confirmation" class="col-form-label">Repeat Password</label>
+              <input type="password" class="form-control" id="password_confirmation" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-form-label">E-Mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label>Date of birth</label>
+              <div class="row">
+                <div class="col-3"><input type="text" class="form-control" placeholder="Day" required></div>
+                <div class="col-6">
+                  <select class="form-control">
+                    <option class="d-none" disabled selected>Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                  </select>
+                </div>
+                <div class="col-3"><input type="text" class="form-control" placeholder="Year" required></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="register-key" class="register-label d-flex">Name save register key <a href="#"><i class="fas fa-info-circle"></i></a></label>
+              <input type="text" class="form-control" id="register-key" required>
+            </div>
+            <p class="text-center">
+              By clicking "Join TARDO" you confirm that you have read and acacepted the 
+              <a href="#" class="text-danger">terms of use</a>
+            </p>
+          </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-block">Join TARDO</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  <!-- === end of Login Modal === -->
+ 
+
+  <!-- === main content start === -->
+  <div class="container-fluid" id="main-conent">
+    <div class="row">
+      <div class="col-xl-2 order-xl-1 order-2 sidebar-col mt-xl-0 mt-5">
+       <aside class="sidebar">
+
+        <div class="sidebar-content">
+        <!-- recommended start -->
+         <div class="recommended">
+           <h4 class="title mt-2 mb-4">RECOMMENDED STREAMS</h4>
+           <div class="recommended-inner">
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_1.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Fimmsen</h5>
+                    <p>Mario Maker 2</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>1150
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_2.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Nikerkun</h5>
+                    <p>Just Dance</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>
+                  1150
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_1.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Fimmsen</h5>
+                    <p>Mario Maker 2</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>
+                  1150
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_2.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Nikerkun</h5>
+                    <p>Just Dance</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>
+                  1150
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_1.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Fimmsen</h5>
+                    <p>Mario Maker 2</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>
+                  1150
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_1.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Fimmsen</h5>
+                    <p>Mario Maker 2</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>1150
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="recommended-item">
+              <a href="#">
+              <div class="d-flex justify-content-between align-content-center">
+                <div class="left d-flex align-content-center">
+                  <div class="img">
+                    <img src="images/face_2.png" alt="face" class="img-fluid">
+                  </div>
+                  <div class="text">
+                    <h5>Nikerkun</h5>
+                    <p>Just Dance</p>
+                  </div>
+                </div>
+                <div class="right d-flex align-content-center">
+                  <span></span>
+                  1150
+                </div>
+              </div>
+              </a>
+            </div>
+          
+            </div>
+           <button class="btn btn-sm text-danger"><small>Show more...</small></button>
+         </div>
+        <!-- recommended end -->
+
+         <!-- <div class="register-box shadow">
+           <h4>Join the TARDO community!</h4>
+           <h5>Discover the best live streams.</h5>
+           <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#registration_modal">Register</a>
+         </div> -->
+
+         <footer class="footer">
+           <div class="link">
+             <ul>
+               <li><a href="#">Imprint</a></li>
+               <li><a href="#">About us</a></li>
+               <li><a href="#">Jobs </a></li>
+               <li><a href="#">TARDO Fire</a></li>
+               <li><a href="#">Advertising</a></li>
+               <li><a href="#">Cookies </a></li>
+               <li><a href="#">Help</a></li>
+               <li><a href="#">Terms of Use</a></li>
+               <li><a href="#">Privacy policy</a></li>
+             </ul>
+           </div>
+           <div class="social-link py-4">
+             <ul class="text-center">
+               <li><a href="#"><img src="images/social_icon/discord.png" alt="discord" class="img-fluid"></a></li>
+               <li><a href="#"><img src="images/social_icon/youtube.png" alt="youtube" class="img-fluid"></a></li>
+               <li><a href="#"><img src="images/social_icon/instagram-sketched.png" alt="instagram-sketched" class="img-fluid"></a></li>
+             </ul>
+           </div>
+         </footer>
+        </div>
+       </aside>
+      </div>
+
+      <div class="col-xl-10 order-xl-2 order-1">
+
+        <div class="bottom-nav">
+          <nav class="navbar navbar-expand navbar-dark channel-nav">
+            <a class="navbar-brand" href="#">
+              <div class="d-flex align-items-center">
+                <img src="images/face_2.png" alt="channel-logo" class="img-fluid mr-1">
+                <div class="channel_name d-sm-block d-none">Nikerkun</div>
+              </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#channel-nav-main" aria-controls="channel-nav-main" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="channel-nav-main">
+              <ul class="navbar-nav mr-auto left-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-star"></i> Subscribe</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-usd-circle"></i> Tip</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-heart"></i></a>
+                </li>
+              </ul>
+
+
+              <ul class="navbar-nav ml-auto right-nav d-lg-flex d-none">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Follower</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Clips</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fas fa-eye-slash"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Stream Chat from Nikerkun</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="far fa-users"></i></a>
+                </li>
+              </ul>
+      
+          
+            </div>
+          </nav>
+        </div>
+
+        
+
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="middle-content">
+              <section class="video">
+                <div class="watch-video">
+                  <div class="main-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="channel-information pt-2 ">
+                  <div class="d-flex justify-content-between">
+                    <div class="left d-flex">
+                      <div class="img">
+                        <img src="images/channel_logo_full.png" alt="channel-logo" class="img-fluid">
+                      </div>
+                      <div class="text">
+                        <h6 class="category">Category: <a href="#" class="text-danger">Rocket League</a> </h6>
+                        <h5 class="video-title">My first stream on TARDO! #StreamOnTARDO</h5>
+                        <span class="language">English</span>
+                      </div>
+                    </div>
+                    <div class="right d-flex justify-content-end ">
+                      <div class="watching"> <i class="fas fa-user text-danger"></i> <span>1254</span> </div>
+                      <div class="share">
+                        <a href="#" title="share" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-share-alt"></i></a>
+                      </div>
+                      <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="pannel">
+                <ul class="text-center">
+                  <li><a href="#"><img src="images/pannel/youtube.png" alt="youtube" class="img-fluid"></a></li>
+                  <li><a href="#"><img src="images/pannel/twitter.png" alt="twitter" class="img-fluid"></a></li>
+                  <li><a href="#"><img src="images/pannel/command.png" alt="command" class="img-fluid"></a></li>
+                </ul>
+              </section>
+
+             <!-- #### Your code start here #### -->
+
+             <!-- #### Your code end here #### -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="right-sidebar">
+              <div class="make-me-sticky">
+
+                <div class="chat-box">
+                  <ul class="comments">
+                    <li class="comment-single d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center pr-3 w-140">
+                        <div class="profile-pic">
+                          <img src="images/now_live/channel_logo_2.png" alt="profile-picture" class="img-fluid">
+                        </div>
+                        <div class="text">
+                          <a href="#" class="user-name text-danger">Fimmsen</a>
+                          <div class="comment-time">2 weeks ago</div>
+                        </div>
+                      </div>
+                      <p class="main-comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, incidunt!
+                      </p>
+                    </li>
+                    <li class="comment-single d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center pr-3 w-140">
+                        <div class="profile-pic">
+                          <img src="images/now_live/channel_logo_3.png" alt="profile-picture" class="img-fluid">
+                        </div>
+                        <div class="text">
+                          <a href="#" class="user-name text-success">Tardo</a>
+                          <div class="comment-time">2 second ago</div>
+                        </div>
+                      </div>
+                      <p class="main-comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing 
+                      </p>
+                    </li>
+                    <li class="comment-single d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center pr-3 w-140">
+                        <div class="profile-pic">
+                          <img src="images/now_live/channel_logo_2.png" alt="profile-picture" class="img-fluid">
+                        </div>
+                        <div class="text">
+                          <a href="#" class="user-name text-danger">Fimmsen</a>
+                          <div class="comment-time">2 weeks ago</div>
+                        </div>
+                      </div>
+                      <p class="main-comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, incidunt!
+                      </p>
+                    </li>
+                    <li class="comment-single d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center pr-3 w-140">
+                        <div class="profile-pic">
+                          <img src="images/now_live/channel_logo_3.png" alt="profile-picture" class="img-fluid">
+                        </div>
+                        <div class="text">
+                          <a href="#" class="user-name text-success">Tardo</a>
+                          <div class="comment-time">2 second ago</div>
+                        </div>
+                      </div>
+                      <p class="main-comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing 
+                      </p>
+                    </li>
+                    <li class="comment-single d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center pr-3 w-140">
+                        <div class="profile-pic">
+                          <img src="images/now_live/channel_logo_2.png" alt="profile-picture" class="img-fluid">
+                        </div>
+                        <div class="text">
+                          <a href="#" class="user-name text-danger">Fimmsen</a>
+                          <div class="comment-time">2 weeks ago</div>
+                        </div>
+                      </div>
+                      <p class="main-comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, incidunt!
+                      </p>
+                    </li>
+                    <li class="comment-single d-flex justify-content-between align-items-center">
+                      <div class="d-flex align-items-center pr-3 w-140">
+                        <div class="profile-pic">
+                          <img src="images/now_live/channel_logo_3.png" alt="profile-picture" class="img-fluid">
+                        </div>
+                        <div class="text">
+                          <a href="#" class="user-name text-success">Tardo</a>
+                          <div class="comment-time">2 second ago</div>
+                        </div>
+                      </div>
+                      <p class="main-comment">
+                        Lorem ipsum dolor sit amet consectetur adipisicing 
+                      </p>
+                    </li>
+                  
+                  </ul>
+                  
+                  <div class="chat-in">
+                    <form action="">
+                      <div class="form-group mb-1 position-relative">
+                        <textarea type="text" class="form-control" placeholder="Type a Message..." rows="1" onfocus="this.rows = '3'" onfocusout="this.rows = '1'"></textarea>
+                        <div class="emoji-box d-none">
+                          <button class="btn"><i class="far fa-smile-wink"></i></button>
+                          <button class="btn"><i class="far fa-meh"></i></button>
+                          <button class="btn"><i class="far fa-grin-beam"></i></button>
+                          <button class="btn"><i class="far fa-grin-squint"></i></button>
+                          <button class="btn"><i class="far fa-grin-squint-tears"></i></button>
+                          <button class="btn"><i class="far fa-grin-wink"></i></button>
+                          <button class="btn"><i class="far fa-sad-cry"></i></button>
+                          <button class="btn"><i class="far fa-meh-rolling-eyes"></i></button>
+                          <button class="btn"><i class="far fa-smile"></i></button>
+                        </div>
+                        <button type="button" class="btn emoji-btn"><i class="far fa-smile-beam"></i></button>
+                        <a href="" class="btn dot-btn"><i class="fas fa-ellipsis-v"></i></a>
+                      </div>
+                      <div class="d-flex justify-content-end align-items-center chat-bottom">
+                        <a href="#"><i class="fas fa-sword"></i></a>
+                        <a href="#"><i class="fas fa-cog"></i></a>
+                        <button type="submit" class="btn btn-chat-submit">Chat</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+           
+          
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ===//end of main content === -->
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+</html>

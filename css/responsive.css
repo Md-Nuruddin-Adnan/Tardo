@@ -56,6 +56,10 @@
     flex: 0 0 79.333333%;
     max-width: 79.333333%;
   }
+
+  .navbar .form-control {
+    min-width: 350px;
+  }
 }
 
 /* Extra large devices (large desktops, 1400px and up) */
@@ -71,10 +75,6 @@
   .sidebar .recommended-item{
     margin-bottom: 20px;
   }
-
-  /* .live-item {
-    padding: 13px 0;
-  } */
 
   .live-item .title {
     font-size: 16px;

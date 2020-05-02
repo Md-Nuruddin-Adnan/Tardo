@@ -1,0 +1,128 @@
+@media (max-width: 575px) { 
+  .channel-information .share a {
+    margin: 0 5px;
+  }
+
+  .channel-information .video-title,
+  .channel-information .category {
+    font-size: 12px;
+    margin: 5px;
+  }
+
+  .channel-information .language {
+    font-size: 10px;
+  }
+
+  .pannel ul li {
+    margin: 0;
+    padding: 0;
+    max-width: 80px;
+  }
+  .pannel ul {
+    padding: 30px 0;
+  }
+}
+
+
+@media(max-width: 767px){
+  .channel-information .watching {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .navbar-dark.channel-nav .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) { 
+  .pannel ul li {
+    max-width: 150px;
+  }
+ }
+@media (max-width: 1199px) { 
+  .navbar-dark .navbar-nav .nav-link.active::before {
+    display: none;
+  }
+
+  .footer .link ul {
+    text-align: center;
+  }
+ }
+
+/* Large devices (desktops and laptop) */
+@media (max-width: 1199px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 30px 0 0 0;
+    margin-left: 0;
+  }
+  .footer {
+    position: static;
+    margin-left: 0;
+    padding: 30px 0;
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+
+  .sidebar-col {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .recommended {
+    padding: 0 15px;
+  }
+
+  .chat-box,
+  .chat-box .comments,
+  .recommended-inner {
+    height: auto;
+  }
+
+  .chat-in,
+  .make-me-sticky,
+  .right-sidebar {
+    position: static;
+  }
+ }
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .col-xl-2 {
+    flex: 0 0 187%;
+    max-width: 18%;
+  }
+  .col-xl-10 {
+    -ms-flex: 0 0 82%;
+    flex: 0 0 82%;
+    max-width: 82%;
+  }
+
+  .navbar .form-control {
+    min-width: 350px;
+  }
+}
+
+/* Extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .chat-box {
+    height: 82vh;
+  }
+  .chat-box .comments {
+    max-height: 68vh;
+  }
+
+}
+/* Extra large devices (large desktops, 1600px and up) */
+@media (min-width: 1600px) {
+  .pannel ul li {
+    max-width: 300px;
+  }
+
+}
