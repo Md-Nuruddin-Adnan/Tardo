@@ -1,4 +1,8 @@
 @media (max-width: 575px) { 
+  .channel-nav {
+    padding: .5rem 0;
+  }
+
   .channel-information .share a {
     margin: 0 5px;
   }
@@ -53,6 +57,15 @@
   }
  }
 
+/* Medium devices */
+@media (max-width: 991px) {
+  .right-sidebar {
+    padding-right: 0;
+  }
+}
+
+
+
 /* Large devices (desktops and laptop) */
 @media (max-width: 1199px) {
   .sidebar {
@@ -79,8 +92,7 @@
   }
 
   .chat-box,
-  .chat-box .comments,
-  .recommended-inner {
+  .chat-box .comments{
     height: auto;
   }
 

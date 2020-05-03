@@ -32,6 +32,27 @@ body {
   background: #0e1215;
   font-family: 'Roboto', sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #191B1F; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 /* basic css end */
 
 /* common css start */
@@ -150,7 +171,7 @@ body {
   background: #ff0000;
   border-radius: 10px;
   position: absolute;
-  bottom: -15px;
+  bottom: -16px;
   left: 0;
 }
 
